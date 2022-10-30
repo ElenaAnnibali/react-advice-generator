@@ -127,7 +127,7 @@ function App() {
     try {
       setLoading(true);
       await asyncTimeout(1000);
-      const response = await fetch(baseUrl);
+      const response = await fetch(baseUrl, { cache: "reload" });
       const advice = await response.json();
       console.log(advice);
       setLoading(false);
