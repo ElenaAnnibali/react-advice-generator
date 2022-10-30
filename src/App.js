@@ -13,6 +13,13 @@ const appStyles = css`
     background-color: hsl(217, 19%, 24%);
     position: absolute;
     top: 25%;
+
+    @media (max-width: 375px) {
+      width: 343px;
+      height: 19.6em;
+      position: absolute;
+      left: 1em;
+    }
   }
 
   span {
@@ -24,6 +31,12 @@ const appStyles = css`
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.3em;
+
+    @media (max-width: 375px) {
+      width: 180px;
+      position: absolute;
+      left: 100px;
+    }
   }
 
   p {
@@ -34,6 +47,12 @@ const appStyles = css`
     top: 2.5em;
     width: 18em;
     height: 4.29em;
+
+    @media (max-width: 375px) {
+      position: absolute;
+      width: 300px;
+      height: 135px;
+    }
   }
 
   button {
@@ -52,10 +71,19 @@ const appStyles = css`
       box-shadow: 0 0 2em 0.5em hsl(150, 100%, 66%);
       transition: opacity 0.3s linear;
     }
+
+    @media (max-width: 375px) {
+      position: absolute;
+      top: 21.5em;
+      left: 10.8em;
+    }
   }
 
   img {
     margin-top: 0.37em;
+
+    @media (max-width: 375px) {
+    }
   }
 
   .image {
@@ -66,6 +94,16 @@ const appStyles = css`
     width: 27.8em;
     height: 1.06em;
     left: 2.7em;
+
+    @media (max-width: 375px) {
+      background: url('/images/pattern-divider-mobile.svg');
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 327px;
+      height: 135px;
+      left: 24px;
+      top: 15.5em;
+    }
   }
 `;
 
@@ -110,7 +148,7 @@ function App() {
   return (
     <div css={appStyles}>
       <div className="container">
-        <span>Advice # {adviceId}</span>
+        <span>Advice #{adviceId}</span>
         <div>
           <p>"{advices}"</p>
         </div>
